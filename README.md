@@ -1,13 +1,125 @@
-Dissentis.AI Parser - Extractor y Limpiador de Texto InteligenteAutor: Alex AlvesVersión: 1.0.0Fecha: 26 de julio de 20251. Resumen del ProyectoDissentis.AI Parser es una aplicación de escritorio multiplataforma diseñada para la extracción, limpieza y estructuración de contenido textual a partir de una amplia variedad de formatos de archivo. El objetivo principal de esta herramienta es pre-procesar documentos para facilitar su posterior análisis en tareas de Procesamiento del Lenguaje Natural (PLN), así como para su uso como corpus de entrada en Modelos de Lenguaje Grandes (LLMs).El software cuenta con una interfaz gráfica de usuario (GUI) intuitiva que simplifica el proceso, haciéndolo accesible tanto para usuarios técnicos como no técnicos.2. Características PrincipalesSoporte Multi-Formato: Capacidad para procesar una gran diversidad de tipos de archivo, incluyendo:Documentos de texto: .pdf, .docx, .odt, .rtf, .txt, .mdPresentaciones y Hojas de Cálculo: .pptx, .xlsxLibros electrónicos: .epubFormatos web y de datos: .html, .xml, .json, .csvLimpieza Inteligente de Texto: Aplicación de reglas heurísticas y expresiones regulares para eliminar "ruido" textual y formatear elementos estructurales como títulos y listas.Interfaz Gráfica de Usuario (GUI) Intuitiva:Funcionalidad de "arrastrar y soltar" (Drag and Drop).Barra de progreso y notificaciones de estado en tiempo real.Contadores de palabras y caracteres.Procesamiento Asíncrono: El análisis de archivos se ejecuta en un hilo secundario para mantener la interfaz siempre responsiva.3. Captura de Pantalla[Imagen de la interfaz de Dissentis.AI Parser mostrando el área de texto con un documento procesado]4. Pila Tecnológica (Stack)Lenguaje de Programación: Python 3.12+Framework de GUI: PySide6 (Qt for Python)Gestor de Dependencias y Entorno: PoetryBibliotecas Principales de Parseo: pdfplumber, python-docx, BeautifulSoup4, openpyxl, y otras.5. Instalación y Puesta en MarchaPrerrequisitosTener instalado Python 3.12 o superior.Tener instalado Poetry como gestor de paquetes.Pasos de InstalaciónClonar el repositorio:git clone https://github.com/AlexAlves87/dissentis-parser-app.git
+
+
+# Dissentis.AI Parser
+
+**Extractor y Limpiador Inteligente de Texto**
+
+---
+
+**Autor:** Alex Alves
+**Versión:** 1.0.0
+**Fecha:** 26 de julio de 2025
+**Licencia:** [MIT](LICENSE)
+
+---
+
+## 📌 Resumen del Proyecto
+
+**Dissentis.AI Parser** es una aplicación de escritorio multiplataforma diseñada para la extracción, limpieza y estructuración de contenido textual a partir de diversos formatos de archivo.
+
+Su principal objetivo es preprocesar documentos para facilitar tareas posteriores de **Procesamiento del Lenguaje Natural (PLN)** y servir como corpus para **Modelos de Lenguaje Grandes (LLMs)**.
+
+Cuenta con una interfaz gráfica intuitiva (GUI) para una experiencia fluida, tanto para usuarios técnicos como no técnicos.
+
+---
+
+## 🚀 Características Principales
+
+* ✅ **Soporte Multi-Formato**: Procesa una amplia variedad de archivos:
+
+  * **Documentos de texto**: `.pdf`, `.docx`, `.odt`, `.rtf`, `.txt`, `.md`
+  * **Presentaciones y Hojas de cálculo**: `.pptx`, `.xlsx`
+  * **Libros electrónicos**: `.epub`
+  * **Formatos web y datos estructurados**: `.html`, `.xml`, `.json`, `.csv`
+
+* ✅ **Limpieza Inteligente de Texto**:
+
+  * Eliminación de ruido textual mediante heurísticas y expresiones regulares.
+  * Formateo automático de títulos, listas y elementos estructurales.
+
+* ✅ **Interfaz Gráfica Intuitiva**:
+
+  * Funcionalidad **Drag and Drop** para archivos.
+  * Barra de progreso y notificaciones en tiempo real.
+  * Contadores automáticos de palabras y caracteres.
+
+* ✅ **Procesamiento Asíncrono**:
+
+  * Análisis de archivos ejecutado en segundo plano para mantener la interfaz siempre fluida y receptiva.
+
+---
+
+## 🖥️ Captura de Pantalla
+
+![Interfaz de Dissentis.AI Parser mostrando un documento procesado](screenshot.png)
+
+*(Nota: Reemplazar con imagen real del proyecto.)*
+
+---
+
+## 🛠️ Pila Tecnológica
+
+| Componente               | Detalles                                                  |
+| ------------------------ | --------------------------------------------------------- |
+| Lenguaje de Programación | Python 3.12+                                              |
+| Interfaz Gráfica (GUI)   | PySide6 (Qt for Python)                                   |
+| Gestión de Dependencias  | Poetry                                                    |
+| Bibliotecas principales  | `pdfplumber`, `python-docx`, `BeautifulSoup4`, `openpyxl` |
+
+---
+
+## 🔧 Instalación y Puesta en Marcha
+
+### 📌 Prerrequisitos
+
+* Python **3.12 o superior**
+* Poetry (gestor de paquetes)
+
+### ⚙️ Pasos de Instalación (opcional si usas el ejecutable)
+
+```bash
+git clone https://github.com/AlexAlves87/dissentis-parser-app.git
 cd dissentis-parser-app
-Instalar las dependencias:poetry install
-6. Uso de la AplicaciónPara ejecutar la aplicación desde el código fuente, utiliza el siguiente comando:poetry run python src/main.py
-Alternativamente, se puede generar un ejecutable independiente utilizando herramientas como PyInstaller.7. Estructura del Proyecto/
+poetry install
+```
+
+---
+
+## 🚦 Ejecución de la Aplicación
+
+* **✅ Usando el ejecutable incluido:**
+  Descarga el archivo correspondiente a tu sistema operativo desde la carpeta `dist/` y ejecútalo directamente.
+  *(No requiere instalación adicional ni dependencias).*
+
+* **📌 Desde el código fuente (opcional):**
+
+```bash
+poetry run python src/main.py
+```
+
+---
+
+## 📁 Estructura del Proyecto
+
+```plaintext
+dissentis-parser-app/
+├── dist/                 # Ejecutables listos para usar
 ├── src/
-│   ├── main.py             # Lógica de la interfaz gráfica (GUI).
-│   └── parser_core.py      # Módulo con la lógica de extracción y limpieza.
+│   ├── main.py           # Lógica de la interfaz gráfica (GUI)
+│   └── parser_core.py    # Módulo con la lógica de extracción y limpieza
 ├── .gitignore
 ├── poetry.lock
 ├── pyproject.toml
 └── README.md
-8. LicenciaEste proyecto se distribuye bajo la Licencia MIT.
+```
+
+---
+
+## 📄 Licencia
+
+Este proyecto se distribuye bajo la licencia [MIT](LICENSE).
+
+---
+
+**© 2025 Alex Alves. Todos los derechos reservados.**
+
