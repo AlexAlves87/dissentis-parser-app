@@ -4,8 +4,8 @@ from pathlib import Path
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
 
-# Importamos la lógica principal de nuestro parser
-from parser_core import (EXTRACTORES, extraer_texto, limpiar_y_estructurar_texto)
+# CORRECCIÓN: Se añade un punto para el import relativo
+from .parser_core import (EXTRACTORES, extraer_texto, limpiar_y_estructurar_texto)
 
 # Inicializamos la aplicación Flask
 app = Flask(__name__)
