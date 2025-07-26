@@ -51,9 +51,9 @@ Cuenta con una interfaz gráfica intuitiva (GUI) para una experiencia fluida, ta
 
 ## 🖥️ Captura de Pantalla
 
-![Interfaz de Dissentis.AI Parser mostrando un documento procesado](screenshot.png)
+## 🖥️ Captura de Pantalla
 
-*(Nota: Reemplazar con imagen real del proyecto.)*
+![Interfaz de Dissentis.AI Parser mostrando un documento procesado](assets/img01.png)
 
 ---
 
