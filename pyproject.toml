@@ -25,6 +25,12 @@ dependencies = [
     "gunicorn (>=23.0.0,<24.0.0)",
 ]
 
+# --- CORRECCIÓN AÑADIDA ---
+# Esta sección le dice a Poetry que no trate el proyecto como un paquete,
+# solucionando el error de despliegue en Render.
+[tool.poetry]
+package-mode = false
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
